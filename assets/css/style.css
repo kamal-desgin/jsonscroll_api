@@ -1,0 +1,292 @@
+*,
+*::befor,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  position: relative;
+  background: #6936e4;
+  height: 50px;
+  width: 25vw;
+  padding: 10px  40px;
+  display: block;
+  margin: 0 auto;
+}
+
+header h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+header h2 span {
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+header.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  header {
+    width: 100%;
+  }
+}
+
+#messages {
+  position: relative;
+  display: block;
+  width: 25vw;
+  height: calc( 100vh - 50px);
+  background: #f9f9f9;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+#messages::-webkit-scrollbar {
+  display: block;
+  width: 5px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+#messages::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px #ccc;
+          box-shadow: inset 0 0 5px #ccc;
+  border-radius: 10px;
+}
+
+#messages .profile-box {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e6e3e3;
+  padding: 20px 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#messages .profile-box .deletemenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 100%;
+  cursor: pointer;
+  background: transparent;
+}
+
+#messages .profile-box .delete-sec {
+  position: relative;
+  width: 50px;
+  height: 200px;
+  background: red;
+  border-radius: 6px;
+  margin-right: 10px;
+  display: none;
+  overflow: hidden;
+}
+
+#messages .profile-box .delete-sec span {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffff;
+}
+
+#messages .profile-box .delete-sec span i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-right: 1rem;
+}
+
+#messages .profile-box .editmenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 100%;
+  cursor: pointer;
+  background: transparent;
+}
+
+#messages .profile-box .edit-sec {
+  position: relative;
+  width: 50px;
+  height: 200px;
+  background: green;
+  border-radius: 6px;
+  margin-left: 10px;
+  display: none;
+  overflow: hidden;
+}
+
+#messages .profile-box .edit-sec span {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffff;
+}
+
+#messages .profile-box .edit-sec span i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-right: 1rem;
+}
+
+#messages .profile-box .profile-sec {
+  position: relative;
+  width: calc( 100% - 0px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#messages .profile-box .profile-sec .profile-top {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#messages .profile-box .profile-sec .profile-top .imgbox {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+#messages .profile-box .profile-sec .profile-top .imgbox img {
+  max-width: 100% !important;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#messages .profile-box .profile-sec .profile-top .namebox {
+  position: relative;
+}
+
+#messages .profile-box .profile-sec .profile-top .namebox h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+#messages .profile-box .profile-sec .profile-top .namebox small {
+  margin-bottom: 0;
+}
+
+#messages .profile-box .profile-sec.active {
+  width: calc( 100% - 60px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#messages .profile-box p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  #messages {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #messages .profile-box .delete-sec,
+  #messages .profile-box .edit-sec {
+    width: 35px;
+  }
+  #messages .profile-box .profile-sec.active {
+    width: calc( 100% - 45px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
